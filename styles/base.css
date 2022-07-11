@@ -1,0 +1,32 @@
+:root {
+  --primary-clr-dark: hsl(300, 43%, 22%);
+  --primary-clr-light: hsl(333, 80%, 67%);
+  --neutral-clr-dark: hsl(303, 10%, 53%);
+  --neutral-clr-light: hsl(300, 24%, 96%);
+  --neutral-clr: hsl(0, 0%, 100%);
+  --fnt-main: 'League Spartan', sans-serif;
+}
+
+*, *::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fnt-main);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+p,
+figure {
+  margin: 0;
+}
+
