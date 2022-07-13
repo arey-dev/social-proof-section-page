@@ -12,11 +12,18 @@
 }
 
 body {
+  background:
+    url(../images/bg-pattern-top-desktop.svg) top left no-repeat,
+    url(../images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
   font-family: var(--fnt-main);
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
+}
+
+main {
+  height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,5 +35,19 @@ h1, h2, h3, h4, h5, h6 {
 p,
 figure {
   margin: 0;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  -webkit-clip-path: inset(50%) !important;
+  height: 1px !important;
+  width: 1px !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
+  margin: -1px !important;
 }
 

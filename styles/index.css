@@ -1,16 +1,133 @@
-/* .container {
+/* CLASSES */
+.container {
   max-width: 1400px;
   min-width: 375px;
   width: 100%;
-  margin: 0 auto;
   overflow: auto;
-  padding: 0 2rem;
+  margin: 0 auto;
+  padding: 0 3rem;
 }
 
 .grid {
   display: grid;
+  place-items: center;
+}
+/* --END-- */
+
+main.container.grid{
+  grid-template-areas:
+    "caption ratings" 
+    "reviews reviews";
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, auto);
 }
 
-.flex {
+#caption {
+  grid-area: caption;
+}
+
+#caption h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 0.9;
+  color: var(--primary-clr-dark);
+}
+
+#caption p {
+  color: var(--neutral-clr-dark)
+}
+
+#ratings {
+  grid-area: ratings;
   display: flex;
-} */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.ratings-flex {
+  display: flex;
+  background-color: var(--neutral-clr-light);
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 0.375rem;
+}
+
+.ratings-flex:nth-of-type(1) {
+  align-self: flex-start;
+}
+
+.ratings-flex:nth-last-of-type(2) {
+  align-self: center;
+}
+
+.img-wrapper {
+  display: flex;
+  padding: 0.875rem 1.5rem;
+  column-gap: 0.5rem;
+}
+
+.ratings-text {
+  color: var(--primary-clr-dark);
+  font-weight: 700;
+  width: 100%;
+}
+
+#reviews {
+  grid-area: reviews;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  place-items: center;
+  gap: 2rem;
+}
+
+#reviews article {
+  background-color: var(--primary-clr-dark);
+  color: var(--neutral-clr);
+  padding: 1.5rem;
+  border-radius: 0.375rem;
+}
+
+.article-flex {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.img-wrapper-article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  padding: 0.5rem;
+}
+
+.img-wrapper-article img {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+article .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+  width: 80%;
+  line-height: 1.3;
+}
+
+article .name span {
+  color: var(--primary-clr-light);
+  font-weight: 400;
+}
+
+article p {
+  padding-block: 0.5rem;
+}
+
+
