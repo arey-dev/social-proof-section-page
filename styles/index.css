@@ -16,13 +16,17 @@
   gap: 2rem;
 } 
 
-.container-flex {
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* --END-- */
+
+.main-flex {
   height: inherit;
 }
-/* --END-- */
 
 main.container.grid {
   grid-template-areas:
@@ -50,22 +54,17 @@ main.container.grid {
 
 #ratings {
   grid-area: ratings;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-end;
   gap: 1rem;
   width: 100%;
-  height: 100%;
 }
 
 .ratings-flex {
   background-color: var(--neutral-clr-light);
-  display: flex;
-  align-items: center;
   border-radius: 0.375rem;
   max-width: 400px;
-  width: 100%;
+  width: inherit;
 }
 
 .ratings-flex:nth-of-type(1) {
@@ -83,20 +82,13 @@ main.container.grid {
 }
 
 .img-wrapper-ratings {
-  display: flex;
   column-gap: 0.5rem;
   padding: 0.963rem 1.5rem;
 }
 
 #reviews {
   grid-area: reviews;
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr;
-  place-items: center;
-  gap: 2rem;
-  width: 100%;
-  height: 100%;
 }
 
 #reviews article {
@@ -115,7 +107,6 @@ main.container.grid {
 }
 
 .article-flex {
-  display: flex;
   flex-direction: row-reverse;
   width: 100%;
 }
@@ -126,9 +117,6 @@ main.container.grid {
 }
 
 .img-wrapper-article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0.5rem;
   width: 20%;
 }
@@ -149,6 +137,3 @@ article .name span {
 article p {
   padding-block: 0.5rem;
 }
-
-
-
